@@ -29,7 +29,7 @@ A cross-platform implementation of RGB-D SLAM proposed by Keller et al.
 
 # Example Result
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0sRPtVyJc5w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![YouTube Video of Cross-Platform RGB-D SLAM](https://img.youtube.com/vi/0sRPtVyJc5w/0.jpg)](https://www.youtube.com/watch?v=0sRPtVyJc5w)
 
 # Tested Environment List
 
