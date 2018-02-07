@@ -1,0 +1,31 @@
+// REF: http://answers.opencv.org/question/82453/calculate-surface-normals-from-depth-image-using-neighboring-pixels-cross-product/
+#version 430
+
+layout (binding = 0, rgba32f) readonly uniform image2D dataIn;		// Depth map
+layout (binding = 1, rgba32f) writeonly uniform image2D dataOut;	// Normal map
+
+layout (local_size_x = 20, local_size_y = 20) in;
+
+void main(void)
+{
+	ivec2 u = ivec2(gl_GlobalInvocationID.xy);
+	vec4 vert[5] = {
+		imageLoad(dataIn, u - ivec2(1, 0)),
+		imageLoad(dataIn, u + ivec2(1, 0)),
+		imageLoad(dataIn, u - ivec2(0, 1)),
+		imageLoad(dataIn, u + ivec2(0, 1)),
+		imageLoad(dataIn, u)
+	};
+
+	if (vert[0].w > 0.0 && vert[1].w > 0.0 && vert[2].w > 0.0  && vert[3].w > 0.0 && vert[4].w > 0.0)
+	{
+		vec3 vecX = normalize(vert[1].xyz - vert[0].xyz);
+		vec3 vecY = normalize(vert[3].xyz - vert[2].xyz);
+
+		imageStore(dataOut, u, vec4(normalize(cross(vecY, vecX)), 0.0));
+	}
+	else
+	{
+		imageStore(dataOut, u, vec4(0.0));
+	}
+}

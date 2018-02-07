@@ -1,0 +1,13 @@
+# input_param.txt
+# fx, fy, cx, cy
+262.5 262.5 159.75 119.75
+# window width, height
+320 240
+# window name
+RGB-D SLAM
+# file name of the ground truth text file
+D:/Dataset/MY_RGBD/desktop/groundtruth.txt
+# Color frames
+D:/Dataset/MY_RGBD/desktop/rgb.txt
+# Depth frames
+D:/Dataset/MY_RGBD/desktop/depth.txt

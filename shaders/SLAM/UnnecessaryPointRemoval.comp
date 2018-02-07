@@ -1,0 +1,65 @@
+#version 430 core
+
+layout(binding = 1, offset = 0) uniform atomic_uint g_idxDst;
+
+// Data structure
+struct gMapData
+{
+	vec4 data;	// Confidence, radius, timestamp, and empty data 
+	vec4 vert;	// Vertex
+	vec4 norm;	// Normal
+	vec4 color;	// Color
+};
+// Global map (source)
+layout(std430, binding = 0) buffer gMapSrc
+{
+	gMapData elemSrc[];
+};
+// Global map (distination; removed)
+layout(std430, binding = 1) buffer gMapDst
+{
+	gMapData elemDst[];
+};
+
+layout(local_size_x = 400, local_size_y = 1) in;
+
+uniform float c_stable;
+uniform int timestamp;
+
+bool validPoint(uint idx)
+{
+	if (elemSrc[idx].data.y > 0.0)
+	{
+		// 4.3 Removing points: Condition #1
+		if (elemSrc[idx].data.x < c_stable
+			&& timestamp - elemSrc[idx].data.z > 30)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+	else
+	{
+		return false;
+	}
+}
+void setPoint(uint idxSrc, uint idxDst)
+{
+	elemDst[idxDst].data = elemSrc[idxSrc].data;
+	elemDst[idxDst].vert = elemSrc[idxSrc].vert;
+	elemDst[idxDst].norm = elemSrc[idxSrc].norm;
+	elemDst[idxDst].color = elemSrc[idxSrc].color;
+}
+
+void main(void)
+{
+	uint idxSrc = gl_GlobalInvocationID.x;
+	if (validPoint(idxSrc))
+	{
+		uint idxDst = atomicCounterIncrement(g_idxDst);
+		setPoint(idxSrc, idxDst);
+	}
+}

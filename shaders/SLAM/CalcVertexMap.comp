@@ -1,0 +1,26 @@
+#version 430
+
+layout (binding = 0, r32f) readonly uniform image2D dataIn;			// Depth map
+layout (binding = 1, rgba32f) writeonly uniform image2D dataOut;	// Vertex map
+
+uniform mat3 invK;		// Inverse of the intrinsic matrix
+uniform float minDepth;
+uniform float maxDepth;
+
+layout (local_size_x = 20, local_size_y = 20) in;
+
+void main(void)
+{
+	ivec2 u = ivec2(gl_GlobalInvocationID.xy);
+	float z = imageLoad(dataIn, u).r;
+
+	if (z >= minDepth && z <= maxDepth)
+	{
+		vec3 v = z * invK * vec3(u, 1.0);
+		imageStore(dataOut, u, vec4(v, 1.0));
+	}
+	else
+	{
+		imageStore(dataOut, u, vec4(0.0, 0.0, 0.0, 0.0));
+	}
+}
