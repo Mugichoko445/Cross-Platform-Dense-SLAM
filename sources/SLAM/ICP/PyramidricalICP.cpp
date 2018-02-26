@@ -17,7 +17,7 @@ namespace rgbd
 
 			glm::mat3 _K;
 			_K[0][0] = K[0][0] / bias; _K[1][1] = K[1][1] / bias;
-			_K[2][0] = K[2][0] / bias; _K[2][1] = K[2][1] / bias;
+			_K[2][0] = (K[2][0] + 0.5f) / bias - 0.5f; _K[2][1] = (K[2][1] + 0.5f) / bias - 0.5f;
 
 			icp[lv] = std::make_shared<rgbd::PointToPlaneICP>(width / bias, height / bias, _K, progs);
 		}
