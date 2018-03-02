@@ -14,19 +14,10 @@ layout(std430, binding = 0) buffer gMap
 	gMapData elems[];
 };
 
-flat out vec3 vsVert;
-flat out vec3 vsNorm;
-flat out vec3 vsColor;
-flat out float vsRadius;
-flat out float vsConf;
+flat out int index;
 
 void main(void)
 {
-	int idx = gl_VertexID;
-	vsConf = elems[idx].data.x;
-	vsRadius = elems[idx].data.y;
-	vsNorm = elems[idx].norm.xyz;
-	vsVert = elems[idx].vert.xyz;
-	vsColor = elems[idx].color.rgb;
-	gl_Position = vec4(vsVert, 1.0);
+	index = gl_VertexID;
+	gl_Position = vec4(elems[index].vert.xyz, 1.0);
 }
