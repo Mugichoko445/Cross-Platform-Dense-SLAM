@@ -7,8 +7,10 @@ in vec2 gsUvTex;
 
 void main(void)
 {
-	float val = dot(gsUvTex, gsUvTex);
-	if (val > 1.0) discard;
+	// this pixel-wise process does not contribute much
+	// since the surfels are very small
+	//float val = length(gsUvTex);
+	//if (val > 1.0) discard;
 
 	gl_FragData[0] = vec4(gsVert, 1.0);
 	gl_FragData[1] = vec4(gsNorm, 0.0);

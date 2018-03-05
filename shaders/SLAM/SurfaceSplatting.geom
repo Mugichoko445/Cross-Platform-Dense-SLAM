@@ -20,6 +20,7 @@ layout(std430, binding = 0) buffer gMap
 uniform mat4 invT;	// Transformation from the world to the sensor
 uniform mat4 P;
 uniform float c_stable;	// points with "c >= c_stable" are considered stable
+uniform float scale;		// enlarge surfels to reduce noisy dots...
 
 flat in int index[];
 
@@ -58,8 +59,8 @@ void main(void)
 			vec3 v = cross(norm, vec3(-1.0, 0.0, 0.0));
 			vec3 u = cross(norm, v);
 			// Scale to radius
-			u *= rad;
-			v *= rad;
+			u *= rad * scale;
+			v *= rad * scale;
 			// Transform and emit four corners
 			gl_Position = transPtForGL(vec4(vert.xyz - u + v, 1.0));
 			gsUvTex = vec2(-1.0, 1.0);

@@ -64,6 +64,7 @@ namespace rgbd
 
 		this->progs["SurfaceSplatting"]->setUniform("P", P);
 		this->progs["SurfaceSplatting"]->setUniform("c_stable", GlobalMapConstParam::CSTABLE);
+		this->progs["SurfaceSplatting"]->setUniform("scale", 1.5f);
 
 		this->progs["UnnecessaryPointRemoval"]->setUniform("c_stable", GlobalMapConstParam::CSTABLE);
 	}
