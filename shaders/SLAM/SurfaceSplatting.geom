@@ -48,15 +48,14 @@ void main(void)
 		vec4 cPos = transPtForGL(vert);
 		cPos /= cPos.w;
 		
-		if (norm.z < 0.0 && cPos.x >= -1.0 && cPos.x <= 1.0 &&
-			cPos.y >= -1.0 && cPos.y <= 1.0 && cPos.z > 0.0 && cPos.z < 1.0)
+		if (cPos.x >= -1.0 && cPos.x <= 1.0 && cPos.y >= -1.0 && cPos.y <= 1.0 && cPos.z > 0.0 && cPos.z < 1.0)
 		{
 			gsVert = mat4x3(invT) * vert;
 			gsNorm = mat3(invT) * norm;
 			gsColor = elems[idx].color.rgb;
 			
 			// Create tangent space.
-			vec3 v = cross(norm, vec3(-1.0, 0.0, 0.0));
+			vec3 v = abs(norm.y) > abs(norm.x) ? cross(norm, vec3(1.0, 0.0, 0.0)) : cross(vec3(0.0, 1.0, 0.0), norm);
 			vec3 u = cross(norm, v);
 			// Scale to radius
 			u *= rad * scale;
