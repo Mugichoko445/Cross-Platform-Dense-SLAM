@@ -8,8 +8,8 @@ A cross-platform implementation of RGB-D SLAM proposed by Keller et al.
 
 * C++ compiler
 * OpenGL 4.3 or later
-    * requires GLEW and GLFW3
-* OpenCV 2.X or later
+    * requires [GLEW](http://glew.sourceforge.net/), [GLFW3](http://www.glfw.org/), and [GLM](https://glm.g-truc.net/0.9.8/index.html)
+* [OpenCV 2.X or later](https://opencv.org/)
     * used as image read/write and a linear problem solver (QR decomposition)
     * thus, you can easily replace OpenCV with other libraries
 * Lisence
@@ -32,8 +32,49 @@ A cross-platform implementation of RGB-D SLAM proposed by Keller et al.
 [![YouTube Video of Cross-Platform RGB-D SLAM](https://img.youtube.com/vi/0sRPtVyJc5w/0.jpg)](https://www.youtube.com/watch?v=0sRPtVyJc5w)
 
 # Tested Environment List
-
-* Win 10 64bit + VS2015 + GLEW + GLFW3 + OpenCV
+<table>
+	<tbody>
+		<tr>
+			<td colspan="2"><b>Hardware</b></td>
+			<td colspan="5"><b>Software</b></td>
+		</tr>
+		<tr>
+			<td><b>CPU</b></td>
+			<td><b>GPU</b></td>
+			<td><b>OS</b></td>
+			<td><b>GLEW</b></td>
+			<td><b>GLFW</b></td>
+			<td><b>GLM</b></td>
+			<td><b>OpenCV</b></td>
+		</tr>
+		<tr>
+			<td>Intel Core i7 6567U</td>
+			<td>Intel Iris Graphics 550</td>
+			<td>Win 10</td>
+			<td>1.13.0</td>
+			<td>3.2</td>
+			<td>0.9.8.5</td>
+			<td>3.3.1</td>
+		</tr>
+		<tr>
+			<td>Intel Core i7 4770S</td>
+			<td>NVIDIA GeForce GTX760</td>
+			<td>Win 10</td>
+			<td>2.1.0</td>
+			<td>3.2.1</td>
+			<td>0.9.8.5</td>
+			<td>3.3.0</td>
+		</tr>
+		<tr>
+			<td colspan="2"><a href="https://developer.nvidia.com/embedded/buy/jetson-tx2" target="_blank">NVIDIA Jetson TX2</a></td>
+			<td>Win 10</td>
+			<td>1.13.02.1.0</td>
+			<td>3.2.1</td>
+			<td>0.9.7.2</td>
+			<td>2.4.13.1</td>
+		</tr>
+	</tbody>
+</table>
 
 # Current issues
 
