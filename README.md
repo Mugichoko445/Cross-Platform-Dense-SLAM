@@ -67,8 +67,8 @@ A cross-platform implementation of RGB-D SLAM proposed by Keller et al.
 		</tr>
 		<tr>
 			<td colspan="2"><a href="https://developer.nvidia.com/embedded/buy/jetson-tx2" target="_blank">NVIDIA Jetson TX2</a></td>
-			<td>Win 10</td>
-			<td>1.13.02.1.0</td>
+			<td>Ubuntu 16.04 (JetPack 3.1)</td>
+			<td>1.13.0</td>
 			<td>3.2.1</td>
 			<td>0.9.7.2</td>
 			<td>2.4.13.1</td>
