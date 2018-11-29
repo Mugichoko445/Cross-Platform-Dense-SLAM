@@ -21,15 +21,15 @@ void TUMRGBDUtil::open(
 	this->K = K;
 	this->isQVGA = isQVGA;
 
-	path_c = std::tr2::sys::path(cFramePath).parent_path().string();
-	path_d = std::tr2::sys::path(dFramePath).parent_path().string();
+	path_c = std::experimental::filesystem::path(cFramePath).parent_path().string();
+	path_d = std::experimental::filesystem::path(dFramePath).parent_path().string();
 
 	ifs_c.open(cFramePath);
-	if (!ifs_c.is_open()) std::cout << "Failed to open: " << cFramePath;
+	if (!ifs_c.is_open()) std::cout << "Failed to open: " << cFramePath << std::endl;
 	ifs_d.open(dFramePath);
-	if (!ifs_d.is_open()) std::cout << "Failed to open: " << dFramePath;
+	if (!ifs_d.is_open()) std::cout << "Failed to open: " << dFramePath << std::endl;
 	ifs_gt.open(gtPath);
-	if (!ifs_gt.is_open()) std::cout << "Failed to open: " << gtPath;
+	if (!ifs_gt.is_open()) std::cout << "Failed to open: " << gtPath << std::endl;
 
 	// Ignore first three lines
 	std::string line;
