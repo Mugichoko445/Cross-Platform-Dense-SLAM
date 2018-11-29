@@ -66,7 +66,7 @@ namespace rgbd
 		const float finThresh
 	)
 	{
-		glm::mat4 dT;
+		glm::mat4 dT(1.0f);
 		for (int loop = 0; loop < ICPConstParam::MAX_ITR_NUM[level]; ++loop)
 		{
 			virtualFrameRenderer.execute(level, currFrame, T);

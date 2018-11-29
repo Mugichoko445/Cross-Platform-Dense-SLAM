@@ -28,6 +28,7 @@ void IniFileReader::readData(
 	std::getline(ifs, line);
 	std::getline(ifs, line);
 	iss = std::istringstream(line);
+	K = glm::mat3(1.0f);
 	iss >> K[0][0] >> K[1][1] >> K[2][0] >> K[2][1];
 
 	// Read image size

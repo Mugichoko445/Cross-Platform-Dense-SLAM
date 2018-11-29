@@ -4,7 +4,7 @@ namespace rgbd
 {
 	SLAM::SLAM()
 	{
-		vT.push_back(glm::mat4());
+		vT.push_back(glm::mat4(1.0f));
 	}
 
 	SLAM::~SLAM()
@@ -52,12 +52,12 @@ namespace rgbd
 		for (int idx = 0; idx < 1; ++idx)
 		{
 			std::cout << "Map size: " << gMap->getMapSize() << std::endl;
-			gMap->genVirtualFrame(virtualFrame, glm::mat4());
+			gMap->genVirtualFrame(virtualFrame, glm::mat4(1.0f));
 			virtualFrame.update();
 
-			gMap->updateGlobalMap(currentFrame, glm::mat4(), 0);
+			gMap->updateGlobalMap(currentFrame, glm::mat4(1.0f), 0);
 			gMap->removeUnnecessaryPoints(0);
-			gMap->genIndexMap(glm::mat4());
+			gMap->genIndexMap(glm::mat4(1.0f));
 		}
 		std::cout << "done!" << std::endl;
 	}
@@ -68,7 +68,7 @@ namespace rgbd
 	)
 	{
 		clock_t start_icp = clock();
-		static glm::mat4 T;
+		static glm::mat4 T(1.0f);
 		icp->calc(virtualFrame, currentFrame, T);
 		vT.push_back(vT.back() * T);
 		std::cout << "  ICP: " << (clock() - start_icp) / (double)CLOCKS_PER_SEC << " sec" << std::endl;
