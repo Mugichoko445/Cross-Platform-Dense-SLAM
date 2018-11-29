@@ -13,7 +13,7 @@ App::App(
 	this->tum->readRGBDFrame(dsFrame);
 
 	std::map<std::string, const gl::Shader::Ptr> progs4SLAM;
-	std::string pathToSLAMShaders("../shaders/SLAM/");
+	std::string pathToSLAMShaders("../../shaders/SLAM/");
 	slam.loadShaders(progs4SLAM, pathToSLAMShaders);
 
 	for (auto &f : frame)
@@ -25,7 +25,7 @@ App::App(
 
 	slam.init(frame[rgbd::FRAME::CURRENT], frame[rgbd::FRAME::VIRTUAL], this->tum->getIntrinsicParam(), progs4SLAM);
 
-	std::string pathToAppShaders("../shaders/");
+	std::string pathToAppShaders("../../shaders/");
 	progs.insert(std::make_pair("ScreenQuad", std::make_shared<gl::Shader>(pathToAppShaders + "ScreenQuad.vert", pathToAppShaders + "ScreenQuad.frag")));
 	progs["ScreenQuad"]->setUniform("isYFlip", 1);
 	progs["ScreenQuad"]->setUniform("maxDepth", rgbd::ICPConstParam::MAX_DEPTH);

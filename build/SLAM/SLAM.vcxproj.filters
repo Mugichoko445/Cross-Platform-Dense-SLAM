@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="sources\GLCore">
+      <UniqueIdentifier>{39ad74b6-3dc1-466d-8bce-5b9861cf4323}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources\GLExt">
+      <UniqueIdentifier>{24c8cb55-2901-4173-b092-e5f58863c456}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources\SLAM">
+      <UniqueIdentifier>{5d506c92-5688-4fab-ba2a-70ea5b77b5bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources\SLAM\Frame">
+      <UniqueIdentifier>{5b8e17e1-d163-4818-9242-16d7cf7ee7d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources\SLAM\ICP">
+      <UniqueIdentifier>{6ddca8aa-5cd4-4760-93a9-ccd85899c015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources\SLAM\Utilities">
+      <UniqueIdentifier>{f99881b4-1113-4eb0-9acc-7e3d4a909c42}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\sources\App.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Main.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\SLAM\GlobalMap.cpp">
+      <Filter>sources\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\SLAM\SLAM.cpp">
+      <Filter>sources\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\SLAM\Utilities\IniFileReader.cpp">
+      <Filter>sources\SLAM\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\SLAM\Utilities\TUMRGBDUtilities.cpp">
+      <Filter>sources\SLAM\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\SLAM\Utilities\ClibratedProjectionMatrix.cpp">
+      <Filter>sources\SLAM\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\SLAM\ICP\IterativeClosestPoint.cpp">
+      <Filter>sources\SLAM\ICP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\SLAM\ICP\ProjectiveDataAssoc.cpp">
+      <Filter>sources\SLAM\ICP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\SLAM\ICP\PyramidricalICP.cpp">
+      <Filter>sources\SLAM\ICP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\SLAM\ICP\VirtualFrameRenderer.cpp">
+      <Filter>sources\SLAM\ICP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\SLAM\ICP\ConstantParameters.cpp">
+      <Filter>sources\SLAM\ICP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\SLAM\Frame\DownSampling.cpp">
+      <Filter>sources\SLAM\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\SLAM\Frame\Frame.cpp">
+      <Filter>sources\SLAM\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\SLAM\Frame\BilateralFilter.cpp">
+      <Filter>sources\SLAM\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\SLAM\Frame\CalcNormalMap.cpp">
+      <Filter>sources\SLAM\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\SLAM\Frame\CalcVertexMap.cpp">
+      <Filter>sources\SLAM\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\GLExt\Quad.cpp">
+      <Filter>sources\GLExt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\GLCore\Framebuffer.cpp">
+      <Filter>sources\GLCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\GLCore\Shader.cpp">
+      <Filter>sources\GLCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\GLCore\Texture.cpp">
+      <Filter>sources\GLCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\GLCore\Window.cpp">
+      <Filter>sources\GLCore</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\sources\App.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\SLAM\GlobalMap.h">
+      <Filter>sources\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\SLAM\SLAM.h">
+      <Filter>sources\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\SLAM\Utilities\ClibratedProjectionMatrix.h">
+      <Filter>sources\SLAM\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\SLAM\Utilities\IniFileReader.h">
+      <Filter>sources\SLAM\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\SLAM\Utilities\TUMRGBDUtilities.h">
+      <Filter>sources\SLAM\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\SLAM\ICP\ConstantParameters.h">
+      <Filter>sources\SLAM\ICP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\SLAM\ICP\IterativeClosestPoint.h">
+      <Filter>sources\SLAM\ICP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\SLAM\ICP\ProjectiveDataAssoc.h">
+      <Filter>sources\SLAM\ICP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\SLAM\ICP\PyramidricalICP.h">
+      <Filter>sources\SLAM\ICP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\SLAM\ICP\VirtualFrameRenderer.h">
+      <Filter>sources\SLAM\ICP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\SLAM\Frame\CalcVertexMap.h">
+      <Filter>sources\SLAM\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\SLAM\Frame\ComputeShader.h">
+      <Filter>sources\SLAM\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\SLAM\Frame\DownSampling.h">
+      <Filter>sources\SLAM\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\SLAM\Frame\Frame.h">
+      <Filter>sources\SLAM\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\SLAM\Frame\BilateralFilter.h">
+      <Filter>sources\SLAM\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\SLAM\Frame\CalcNormalMap.h">
+      <Filter>sources\SLAM\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\GLExt\Quad.h">
+      <Filter>sources\GLExt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\GLCore\Framebuffer.h">
+      <Filter>sources\GLCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\GLCore\Shader.h">
+      <Filter>sources\GLCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\GLCore\Texture.h">
+      <Filter>sources\GLCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\GLCore\VertexArray.h">
+      <Filter>sources\GLCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\GLCore\Window.h">
+      <Filter>sources\GLCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\GLCore\Buffer.h">
+      <Filter>sources\GLCore</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

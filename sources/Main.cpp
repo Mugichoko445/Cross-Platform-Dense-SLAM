@@ -10,8 +10,7 @@ int main()
 	int width, height;
 	std::string wndName, gtPath, cFramePath, dFramePath;
 
-	IniFileReader reader("../data/input_param.txt");
-	//IniFileReader reader("../data/input_param_qvga.txt");
+	IniFileReader reader("../../data/input_param.txt");
 	reader.readData(K, width, height, wndName, gtPath, cFramePath, dFramePath);
 
 	TUMRGBDUtil::Ptr tum = std::make_shared<TUMRGBDUtil>();

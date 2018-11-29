@@ -26,7 +26,7 @@ namespace rgbd
 
 		void loadShaders(
 			std::map<std::string, const gl::Shader::Ptr> &progs,
-			const std::string &folderPath = "../shaders/"
+			const std::string &folderPath = "../../shaders/"
 		);
 
 		void init(

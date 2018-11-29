@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\sources\App.cpp" />
+    <ClCompile Include="..\..\sources\GLCore\Framebuffer.cpp" />
+    <ClCompile Include="..\..\sources\GLCore\Shader.cpp" />
+    <ClCompile Include="..\..\sources\GLCore\Texture.cpp" />
+    <ClCompile Include="..\..\sources\GLCore\Window.cpp" />
+    <ClCompile Include="..\..\sources\GLExt\Quad.cpp" />
+    <ClCompile Include="..\..\sources\Main.cpp" />
+    <ClCompile Include="..\..\sources\SLAM\Frame\BilateralFilter.cpp" />
+    <ClCompile Include="..\..\sources\SLAM\Frame\CalcNormalMap.cpp" />
+    <ClCompile Include="..\..\sources\SLAM\Frame\CalcVertexMap.cpp" />
+    <ClCompile Include="..\..\sources\SLAM\Frame\DownSampling.cpp" />
+    <ClCompile Include="..\..\sources\SLAM\Frame\Frame.cpp" />
+    <ClCompile Include="..\..\sources\SLAM\GlobalMap.cpp" />
+    <ClCompile Include="..\..\sources\SLAM\ICP\ConstantParameters.cpp" />
+    <ClCompile Include="..\..\sources\SLAM\ICP\IterativeClosestPoint.cpp" />
+    <ClCompile Include="..\..\sources\SLAM\ICP\ProjectiveDataAssoc.cpp" />
+    <ClCompile Include="..\..\sources\SLAM\ICP\PyramidricalICP.cpp" />
+    <ClCompile Include="..\..\sources\SLAM\ICP\VirtualFrameRenderer.cpp" />
+    <ClCompile Include="..\..\sources\SLAM\SLAM.cpp" />
+    <ClCompile Include="..\..\sources\SLAM\Utilities\ClibratedProjectionMatrix.cpp" />
+    <ClCompile Include="..\..\sources\SLAM\Utilities\IniFileReader.cpp" />
+    <ClCompile Include="..\..\sources\SLAM\Utilities\TUMRGBDUtilities.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\sources\App.h" />
+    <ClInclude Include="..\..\sources\GLCore\Buffer.h" />
+    <ClInclude Include="..\..\sources\GLCore\Framebuffer.h" />
+    <ClInclude Include="..\..\sources\GLCore\Shader.h" />
+    <ClInclude Include="..\..\sources\GLCore\Texture.h" />
+    <ClInclude Include="..\..\sources\GLCore\VertexArray.h" />
+    <ClInclude Include="..\..\sources\GLCore\Window.h" />
+    <ClInclude Include="..\..\sources\GLExt\Quad.h" />
+    <ClInclude Include="..\..\sources\SLAM\Frame\BilateralFilter.h" />
+    <ClInclude Include="..\..\sources\SLAM\Frame\CalcNormalMap.h" />
+    <ClInclude Include="..\..\sources\SLAM\Frame\CalcVertexMap.h" />
+    <ClInclude Include="..\..\sources\SLAM\Frame\ComputeShader.h" />
+    <ClInclude Include="..\..\sources\SLAM\Frame\DownSampling.h" />
+    <ClInclude Include="..\..\sources\SLAM\Frame\Frame.h" />
+    <ClInclude Include="..\..\sources\SLAM\GlobalMap.h" />
+    <ClInclude Include="..\..\sources\SLAM\ICP\ConstantParameters.h" />
+    <ClInclude Include="..\..\sources\SLAM\ICP\IterativeClosestPoint.h" />
+    <ClInclude Include="..\..\sources\SLAM\ICP\ProjectiveDataAssoc.h" />
+    <ClInclude Include="..\..\sources\SLAM\ICP\PyramidricalICP.h" />
+    <ClInclude Include="..\..\sources\SLAM\ICP\VirtualFrameRenderer.h" />
+    <ClInclude Include="..\..\sources\SLAM\SLAM.h" />
+    <ClInclude Include="..\..\sources\SLAM\Utilities\ClibratedProjectionMatrix.h" />
+    <ClInclude Include="..\..\sources\SLAM\Utilities\IniFileReader.h" />
+    <ClInclude Include="..\..\sources\SLAM\Utilities\TUMRGBDUtilities.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{4C7C73E5-9B4F-44F6-8417-8D59E27ACEA7}</ProjectGuid>
+    <RootNamespace>glULF</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\x64_$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\x64_$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../../sources;C:\Libraries\glfw-3.2.1\install\include;C:\Libraries\glew-2.1.0\include;C:\Libraries\glm-0.9.9.0;C:\Libraries\opencv-3.4.2\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Libraries\glew-2.1.0\lib\Release\$(Platform);C:\Libraries\glfw-3.2.1\install\lib;C:\Libraries\opencv-3.4.2\build\x64\vc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;opencv_world342d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../../sources;C:\Libraries\glfw-3.2.1\install\include;C:\Libraries\glew-2.1.0\include;C:\Libraries\glm-0.9.9.0;C:\Libraries\opencv-3.4.2\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Libraries\glew-2.1.0\lib\Release\$(Platform);C:\Libraries\glfw-3.2.1\install\lib;C:\Libraries\opencv-3.4.2\build\x64\vc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;opencv_world342.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
