@@ -48,6 +48,24 @@ A cross-platform implementation of RGB-D SLAM proposed by Keller et al.
 			<td><b>OpenCV</b></td>
 		</tr>
 		<tr>
+			<td>Intel Core i7 8550U</td>
+			<td>Intel UHD Graphics 620</td>
+			<td>Win 10</td>
+			<td>2.1.0</td>
+			<td>3.2.1</td>
+			<td>0.9.9</td>
+			<td>3.4.2</td>
+		</tr>
+		<tr>
+			<td>Intel Core i7 8550U</td>
+			<td>NVIDIA GeForce GTX 1080 Ti (Razer Core v2)</td>
+			<td>Win 10</td>
+			<td>2.1.0</td>
+			<td>3.2.1</td>
+			<td>0.9.9</td>
+			<td>3.4.2</td>
+		</tr>
+		<tr>
 			<td>Intel Core i7 6567U</td>
 			<td>Intel Iris Graphics 550</td>
 			<td>Win 10</td>
@@ -76,9 +94,8 @@ A cross-platform implementation of RGB-D SLAM proposed by Keller et al.
 	</tbody>
 </table>
 
-# Current issues
+# Current known issues
 
-* Slow (<= 10 fps)
 * No dynamic object detection
 
 # Progress Reports (in Japanese)
